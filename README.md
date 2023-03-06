@@ -21,6 +21,7 @@
   ## Referenes
 
   - [Formik Youtube tutorial](https://www.youtube.com/watch?v=7Ophfq0lEAY)
+  - [Formik Docs](https://formik.org/docs/api/formik)
 
 
 

@@ -1,11 +1,11 @@
 
 import './App.css';
-import Form from './components/Form'
+import ProdregForm from './components/Form'
 
 function App() {
   return (
     <div className="App">
-      <Form/>
+      <ProdregForm/>
     </div>
   );
 }
