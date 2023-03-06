@@ -9,7 +9,7 @@ export const prodregSchema = yup.object().shape({
   lname: yup.string().max(20, "charater limit 20").required("Last Name is required"),
   city: yup.string().required("City is required"),
   state: yup.string().required("State is required"),
-  zip: yup.string().matches(zipRegex,{ message: "Not a valid zip code" }).required("Zip code is required"),
+  zip: yup.string().matches(zipRegex,{message: "Not a valid zip code"}).required("Zip code is required"),
   email: yup.string().email("Please enter a valid email").required("Required"),
   phone: yup.string().matches(phoneRegex,{ message: "Not a valid zip code" }),
   model: yup.string().required("Model is required"),
