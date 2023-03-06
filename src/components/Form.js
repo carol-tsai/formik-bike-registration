@@ -3,14 +3,15 @@ import React from 'react';
  import {prodregSchema} from './schemas';
  import './Form.css'
  
+ const onSubmit = async (values, actions) => {
+  console.log(values);
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+  actions.resetForm();
+}
 
  const Form = () => {
-  const onSubmit = async (values, actions) => {
-    console.log(values);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    actions.resetForm();
-  }
-
+  
+  
    const {values, touched, errors, isSubmitting, handleBlur,handleChange,handleSubmit} = useFormik({
      initialValues: {
       fname: "",
@@ -32,11 +33,7 @@ import React from 'react';
       sms: "yes"
      },
      validationSchema: prodregSchema,
-     handleSubmit: async (values, actions) => {
-      console.log(values);
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      actions.resetForm();
-    }
+     handleSubmit: onSubmit
    });
    return (
      <form onSubmit={handleSubmit} autoComplete="off">
