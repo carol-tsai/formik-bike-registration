@@ -2,6 +2,7 @@ import React from 'react';
  import { Form, Formik} from 'formik';
  import {prodregSchema} from './schemas';
  import CustomInput from './questions/CustomInput';
+ import CountryRegion from './questions/CountryRegion';
  import './Form.css'
  
  const onSubmit = async (values, actions) => {
@@ -19,7 +20,6 @@ import React from 'react';
     city: "",
     state: "",
     zip: "",
-    country: "United States",
     email: "",
     brand: "Fuji",
     model: "",
@@ -43,17 +43,10 @@ import React from 'react';
     >
       {props => (
          <Form>
-           <input
-             type="text"
-             onChange={props.handleChange}
-             onBlur={props.handleBlur}
-             value={props.values.fname}
-             name="fname"
-             placeholder='First Name'
-           />
-           {props.errors.fname && <div className='error'>{props.errors.fname}</div>}
+           <CustomInput name="fname" placeholder="First name"/>
            <CustomInput name="lname" placeholder="Last Name"/>
            <CustomInput name="city" placeholder="City"/>
+           <CountryRegion name="state"/>
            <button type="submit">Submit</button>
          </Form>
        )}
