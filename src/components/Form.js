@@ -2,7 +2,7 @@ import React from 'react';
  import { Form, Formik} from 'formik';
  import {prodregSchema} from './schemas';
  import CustomInput from './questions/CustomInput';
- import CountryRegion from './questions/CountryRegion';
+ import State from './questions/State'
  import './Form.css'
  
  const onSubmit = async (values, actions) => {
@@ -46,7 +46,7 @@ import React from 'react';
            <CustomInput name="fname" placeholder="First name"/>
            <CustomInput name="lname" placeholder="Last Name"/>
            <CustomInput name="city" placeholder="City"/>
-           <CountryRegion name="state"/>
+           <State name="state" placeholder="Select a State"/>
            <button type="submit">Submit</button>
          </Form>
        )}
