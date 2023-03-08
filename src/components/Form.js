@@ -31,7 +31,7 @@ import React from 'react';
     price: "",
     newsletter: true,
     phone: "",
-    sms: "yes"
+    sms: true
   }
 
   return (
@@ -51,6 +51,14 @@ import React from 'react';
            <State name="state" placeholder="Select a State"/>
            <CustomInput name="email" placeholder="Email"/>
            <Checkbox type="checkbox" name="newsletter" label="Sign up for our newsletter"/>
+           <CustomInput name="phone" placeholder="Phone (US numbers only)"/>
+           <Checkbox type="checkbox" name="sms" label="Sign up for SMS messages"/>
+           <CustomInput name="model" placeholder="Model Name"/>
+           <CustomInput name="size" placeholder="Bike Size"/>
+           <CustomInput name="serialNo" placeholder="Serial No."/>
+           <CustomInput name="store" placeholder="Retailer purchased from"/>
+           <CustomInput name="price" placeholder="Purchase price (mention currency type)"/>
+           <CustomInput name="dateOfPurchase" placeholder="dateOfPurchase"/>
            <button type="submit">Submit</button>
          </Form>
        )}
