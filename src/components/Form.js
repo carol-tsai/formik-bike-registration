@@ -5,6 +5,7 @@ import React from 'react';
  import State from './questions/State'
  import Checkbox from './questions/Checkbox';
  import './Form.css'
+ import Date from './questions/Date';
  
  const onSubmit = async (values, actions) => {
   console.log(values);
@@ -58,7 +59,7 @@ import React from 'react';
            <CustomInput name="serialNo" placeholder="Serial No."/>
            <CustomInput name="store" placeholder="Retailer purchased from"/>
            <CustomInput name="price" placeholder="Purchase price (mention currency type)"/>
-           <CustomInput name="dateOfPurchase" placeholder="dateOfPurchase"/>
+           <Date name="dateofPurchase"/>
            <button type="submit">Submit</button>
          </Form>
        )}
