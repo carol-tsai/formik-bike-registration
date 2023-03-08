@@ -11,6 +11,7 @@ const Date = ({ ...props }) => {
       {...field}
       {...props}
       selected={field.value || null}
+      placeholderText="Date of Purchase"
       onChange={val => {
         setFieldValue(field.name, val);
       }}
